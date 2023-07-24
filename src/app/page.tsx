@@ -1,9 +1,14 @@
+import Offer from '@/components/Offer'
+import Slider from '@/components/Slider'
+import Featured from '@/components/featured'
 import Image from 'next/image'
 
 export default function Home() {
   return (
-    <main className='bg-black'>
-      <h1 className='text-white'>hello world..!</h1>
+    <main className='bg-white'>
+      <Slider/>
+      <Featured/>
+      <Offer/>
     </main>
   )
 }
