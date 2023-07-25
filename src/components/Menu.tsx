@@ -10,7 +10,7 @@ const Menu = () => {
 
     const [open,setOpen]= useState(false)
 
-    const user = false
+    const user = true;
 
   return (
     <div>
