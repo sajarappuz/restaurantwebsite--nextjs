@@ -6,8 +6,8 @@ import CartItem from './CartItem'
 const Navbar = () => {
     const user = true
   return (
-    <div className='h-12 md:h-18 text-red-500 p-4 flex justify-between items-center border-b-2 border-b-red-300 uppercase'>
-         <div className='hidden md:flex gap-4 flex-1'>
+    <div className='h-12 md:h-18 text-gray-800 p-4 flex justify-between items-center border-b-2 border-b-red-300 uppercase'>
+         <div className='hidden ml-[10px] md:flex gap-4 flex-1'>
            <Link href="/">HomePage</Link>
            <Link href="/menu">Menu</Link>
            <Link href="/">Contact</Link>

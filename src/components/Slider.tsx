@@ -7,41 +7,41 @@ const Slider = () => {
     const data = [
         {
             id:1,
-            title: "Let's taste some unique receipies and flavours",
-            image: "/Slider1.jpg",
+            title: "Let's Find the Perfect Flavour to Eat",
+            image: "/sliderimage1-transformed.png",
         },
         {
             id:2,
-            title: "Gathering for good foods make good memories",
-            image: "/Slider3.jpg"
+            title: "Gather To Eat Foods and Have Memories",
+            image: "/slimage2-transformed.png"
         },
         {
             id:3,
-            title: "Have some crunchy food items you love the most",
-            image: "/slider2.jpg",
+            title: "Crunchy Foods for Foodies..!!",
+            image: "/slimage3-transformed.png",
         },
     ]
 
-    // useEffect(()=>{
-    //     const Interval = setInterval(()=>{
-    //         setCurrentSlide((prev)=> (prev === data.length - 1? 0 :  prev + 1))
-    //     },2000)
-    //     return ()=>clearInterval(Interval)
-    // },[])
+       useEffect(()=>{
+        const Interval = setInterval(()=>{
+            setCurrentSlide((prev)=> (prev === data.length - 1? 0 :  prev + 1))
+        },2000)
+        return ()=>clearInterval(Interval)
+    },[])
 
   return (
      
      
     <div className='flex flex-col-reverse h-[calc(100vh-6rem)]  md:flex-row'>
         
-        <div className='flex-1 flex items-center justify-center flex-col gap-7 text-red-500 bg-red-200 '>
+        <div className='flex-1 flex items-center justify-center flex-col gap-7 text-gray-500 bg-slate-200 '>
             <h1 className='text-3xl text-center uppercase p-4  font-bold xl:text-6xl md:p-10'>
                 {data[currentSlide].title}
             </h1>
-            <button className='bg-red-500 text-white p-4 rounded-[20px] text-xl'>Order Now</button>
+            <button className='bg-gray-500 text-white p-4 rounded-[20px] text-xl'>Order Now</button>
         </div>
-        <div className='flex-1 w-full relative'>
-            <Image src={data[currentSlide].image} alt="slider1 " fill className='object-cover'/>
+        <div className='flex-1 w-full relative bg-slate-200'>
+            <Image src={data[currentSlide].image} alt="slider1 " fill className='object-contain'/>
         </div>
     </div>
   )

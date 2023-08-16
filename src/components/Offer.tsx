@@ -11,10 +11,10 @@ const Offer = () => {
              <p className='text-white text-center'>Have some burgers with these excited offers..! sale ending soon..!
              Grab it fast</p>
              <Countdown/>
-             <button className='bg-red-500 text-white md:w-[200px] w-[100px] h-[30px] rounded-md'>Order Now </button>
+             <button className='bg-gray-500 text-white md:w-[200px] w-[100px] h-[30px] rounded-md'>Order Now </button>
         </div>
         <div className='relative flex-1 w-full'>
-          <Image src="/offerProduct.png" alt='imEs' fill  className='object-contain' />
+          <Image src="/burgeroffer-transformed.png" alt='imEs' fill  className='object-contain' />
         </div>
     </div>
   )

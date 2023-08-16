@@ -21,17 +21,17 @@ const Price = ({price, id, options}: Props) => {
         <h2 className='text-xl font-bold'>${basePrice.toFixed(2)}</h2>
         <div className='flex gap-4'>
             {options?.map((option,index)=>(
-                <button className='p-2 ring-1 ring-red-400 rounded-lg min-w-[6rem]' 
+                <button className='p-2 ring-1 ring-gray-400 rounded-lg min-w-[6rem]' 
                 key={option.title}
                 style={{background:selected === index ?"rgb(248 113 113)": "white",
-                 color:selected === index ? "white" : "red"
+                 color:selected === index ? "white" : "gray"
               }}
               onClick={()=>setSelected(index)}
                 >{option.title}</button>
             ))}
         </div>
         <div className='flex justify-between items-center'>
-              <div className='flex justify-between w-full p-3 ring-1 ring-red-500'>
+              <div className='flex justify-between w-full p-3 ring-1 ring-slate-500'>
                 <span>Quantity</span>
                 <div className='flex gap-4 items-center'>
                     <button onClick={()=>setQuantity((prev)=>(prev > 1 ? prev -1 : 1))}>{'<'}</button>
@@ -39,7 +39,7 @@ const Price = ({price, id, options}: Props) => {
                     <button onClick={()=>setQuantity((prev)=>(prev < 9 ? prev + 1 : 9))}>{'>'}</button>
                 </div>
               </div>
-              <button className='uppercase w-56 bg-red-500 text-white p-3 ring-1 ring-red-500'>Add to Cart</button>
+              <button className='uppercase w-56 bg-gray-500 text-white p-3 ring-1 ring-gray-500'>Add to Cart</button>
         </div>
     </div>
   )
